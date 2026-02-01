@@ -1,0 +1,45 @@
+body {
+  background: #f7c6d9;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.emoji {
+  font-size: 60px;
+}
+
+.buttons {
+  margin-top: 20px;
+  position: relative;
+  height: 50px;
+}
+
+button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#yes {
+  background: #ff4d6d;
+  color: white;
+}
+
+#no {
+  background: #ddd;
+  position: absolute;
+}
