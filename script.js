@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
   const page1 = document.getElementById("page1");
   const page2 = document.getElementById("page2");
@@ -13,35 +13,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Page 1 → Page 2
   startBtn.addEventListener("click", () => {
-    page1.classList.add("hidden");
+    page1.classList.add("fade-out");
 
     setTimeout(() => {
+      page1.classList.add("hidden");
+      page1.classList.remove("fade-out");
+
       page2.classList.remove("hidden");
-    }, 300);
+      page2.classList.add("fade-in");
+    }, 400);
   });
 
-  // NO button escape
+  // NO button escape (inside white card, reduced movement)
   noBtn.addEventListener("mouseenter", () => {
     const cardRect = card.getBoundingClientRect();
     const btnRect = noBtn.getBoundingClientRect();
 
-    const maxX = cardRect.width / 2 - btnRect.width;
-    const maxY = cardRect.height / 2 - btnRect.height;
+    const padding = 40;
+    const maxX = (cardRect.width - btnRect.width) / 2 - padding;
+    const maxY = (cardRect.height - btnRect.height) / 2 - padding;
 
-    const x = (Math.random() * 2 - 1) * maxX;
-    const y = (Math.random() * 2 - 1) * maxY;
+    const x = (Math.random() * 2 - 1) * maxX * 0.6;
+    const y = (Math.random() * 2 - 1) * maxY * 0.6;
 
     noBtn.style.transform = `translate(${x}px, ${y}px)`;
   });
 
-  // YES → video
+  // YES → Page 3 (video)
   yesBtn.addEventListener("click", () => {
-    page2.classList.add("hidden");
+    page2.classList.add("fade-out");
 
     setTimeout(() => {
+      page2.classList.add("hidden");
+      page2.classList.remove("fade-out");
+
       videoPage.classList.remove("hidden");
+      videoPage.classList.add("fade-in");
       finalVideo.play();
-    }, 300);
+    }, 400);
   });
 
 });
