@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const finalVideo = document.getElementById("finalVideo");
   const card = document.querySelector("#page2 .card");
 
-  // Page 1 → Page 2
+  // PAGE 1 → PAGE 2
   startBtn.addEventListener("click", () => {
     page1.classList.add("fade-out");
 
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     noBtn.style.transform = `translate(${x}px, ${y}px)`;
   });
 
-  // YES → Page 3 (video)
+  // YES → PAGE 3 (video with sound once, then silent loop)
   yesBtn.addEventListener("click", () => {
     page2.classList.add("fade-out");
 
@@ -49,7 +49,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
       videoPage.classList.remove("hidden");
       videoPage.classList.add("fade-in");
+
+      // Play WITH sound (user gesture)
+      finalVideo.currentTime = 0;
+      finalVideo.muted = false;
       finalVideo.play();
+
+      // After first play, loop silently
+      finalVideo.addEventListener("ended", function handleEnd() {
+        finalVideo.muted = true;
+        finalVideo.play();
+        finalVideo.removeEventListener("ended", handleEnd);
+      });
+
     }, 400);
   });
 
