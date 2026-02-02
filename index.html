@@ -1,24 +1,32 @@
 <!DOCTYPE html>
+<html>
+<head>
+  <title>Valentine 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
 
 <!-- PAGE 1 -->
-<div class="page page1" id="page1">
-  <img src="CatDog1.jpeg" class="intro-img">
-  <img src="CatDog2.jpeg" class="intro-img">
+<div class="page" id="page1">
+  <div class="card">
+    <img src="CatDog1.jpeg" class="intro-img">
+    <img src="CatDog2.jpeg" class="intro-img">
 
-  <p class="intro-text">
-    This could be us 💖, but you haven't said yes to my proposal yet 😔
-  </p>
+    <p class="intro-text">
+      This could be us 💖, but you haven't said yes to my proposal yet 😔
+    </p>
 
-  <button class="start-btn" onclick="goToPage2()">
-    What proposal?
-  </button>
+    <button class="start-btn" id="startBtn">
+      What proposal?
+    </button>
+  </div>
 </div>
 
-<!-- PAGE 2 (YOUR CURRENT CONTENT) -->
-<div class="page page2 hidden" id="page2">
+<!-- PAGE 2 -->
+<div class="page hidden" id="page2">
   <div class="card">
-    <div class="emoji">🐱💗</div>
+    <img src="CoolCat.jpeg" class="cat-img">
 
     <h2>Will you be my Valentine, Ishi?</h2>
 
@@ -33,3 +41,4 @@
 
 <script src="script.js"></script>
 </body>
+</html>
