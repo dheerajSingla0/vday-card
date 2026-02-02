@@ -1,8 +1,14 @@
+body {
+  margin: 0;
+  background: #f7c6d9;
+  font-family: Arial, sans-serif;
+}
+
+/* Page layout */
 .page {
   height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -11,21 +17,28 @@
   display: none;
 }
 
-/* PAGE 1 */
-.page1 {
-  background: #f7c6d9;
+/* Card */
+.card {
+  background: white;
+  width: 65%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 18px;
   text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
+/* Page 1 images */
 .intro-img {
-  width: 140px;
+  width: 120px;
+  max-width: 40%;
   border-radius: 12px;
-  margin: 10px;
+  margin: 8px;
 }
 
 .intro-text {
   font-size: 18px;
-  margin: 20px;
+  margin: 20px 0;
 }
 
 .start-btn {
@@ -38,7 +51,37 @@
   cursor: pointer;
 }
 
-/* PAGE 2 */
-.page2 {
-  background: #f7c6d9;
+/* Page 2 */
+.cat-img {
+  width: 90px;
+  margin-bottom: 15px;
+}
+
+.buttons {
+  margin-top: 20px;
+  position: relative;
+  height: 50px;
+}
+
+button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#yes {
+  background: #ff4d6d;
+  color: white;
+}
+
+#no {
+  background: #ddd;
+  position: absolute;
+}
+
+.hint {
+  margin-top: 15px;
+  font-size: 14px;
 }
