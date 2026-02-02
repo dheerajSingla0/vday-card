@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Valentine 💖</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -10,8 +11,10 @@
 <!-- PAGE 1 -->
 <div class="page" id="page1">
   <div class="card">
-    <img src="CatDog1.jpeg" class="intro-img">
-    <img src="CatDog2.jpeg" class="intro-img">
+    <div class="image-row">
+      <img src="CatDog1.jpeg" class="intro-img">
+      <img src="CatDog2.jpeg" class="intro-img">
+    </div>
 
     <p class="intro-text">
       This could be us 💖, but you haven't said yes to my proposal yet 😔
@@ -37,6 +40,13 @@
 
     <p class="hint">“No” seems a bit shy 😅</p>
   </div>
+</div>
+
+<!-- VIDEO PAGE -->
+<div class="page hidden" id="videoPage">
+  <video id="finalVideo" controls autoplay>
+    <source src="final.mp4" type="video/mp4">
+  </video>
 </div>
 
 <script src="script.js"></script>
