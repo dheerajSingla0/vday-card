@@ -1,45 +1,44 @@
-body {
-  background: #f7c6d9;
+.page {
   height: 100vh;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: Arial, sans-serif;
 }
 
-.card {
-  background: white;
-  padding: 40px;
-  border-radius: 16px;
+.hidden {
+  display: none;
+}
+
+/* PAGE 1 */
+.page1 {
+  background: #f7c6d9;
   text-align: center;
-  width: 320px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.emoji {
-  font-size: 60px;
+.intro-img {
+  width: 140px;
+  border-radius: 12px;
+  margin: 10px;
 }
 
-.buttons {
-  margin-top: 20px;
-  position: relative;
-  height: 50px;
+.intro-text {
+  font-size: 18px;
+  margin: 20px;
 }
 
-button {
-  padding: 10px 24px;
+.start-btn {
+  padding: 12px 28px;
+  border-radius: 24px;
   border: none;
-  border-radius: 20px;
   font-size: 16px;
+  background: #ff4d6d;
+  color: white;
   cursor: pointer;
 }
 
-#yes {
-  background: #ff4d6d;
-  color: white;
-}
-
-#no {
-  background: #ddd;
-  position: absolute;
+/* PAGE 2 */
+.page2 {
+  background: #f7c6d9;
 }
