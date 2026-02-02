@@ -28,13 +28,15 @@ body {
   box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
-/* Page 1 images */
 .intro-img {
-  width: 120px;
-  max-width: 40%;
-  border-radius: 12px;
+  height: 140px;          /* fixed height */
+  width: auto;            /* width adapts */
+  /* max-width: 45%; */
+  border-radius: 14px;
   margin: 8px;
+  object-fit: cover;      /* prevents distortion */
 }
+
 
 .intro-text {
   font-size: 18px;
