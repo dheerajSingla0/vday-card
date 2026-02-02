@@ -1,16 +1,22 @@
-// Page switch
-document.getElementById("startBtn").addEventListener("click", goToPage2);
+document.addEventListener("DOMContentLoaded", function () {
 
-function goToPage2() {
-  document.getElementById("page1").classList.add("hidden");
-  document.getElementById("page2").classList.remove("hidden");
-}
+  // Page switch
+  const startBtn = document.getElementById("startBtn");
+  const page1 = document.getElementById("page1");
+  const page2 = document.getElementById("page2");
 
-// Moving NO button
-const noBtn = document.getElementById("no");
+  startBtn.addEventListener("click", () => {
+    page1.classList.add("hidden");
+    page2.classList.remove("hidden");
+  });
 
-noBtn.addEventListener("mouseenter", () => {
-  const x = Math.random() * 160 - 80;
-  const y = Math.random() * 80 - 40;
-  noBtn.style.transform = `translate(${x}px, ${y}px)`;
+  // Moving NO button
+  const noBtn = document.getElementById("no");
+
+  noBtn.addEventListener("mouseenter", () => {
+    const x = Math.random() * 160 - 80;
+    const y = Math.random() * 80 - 40;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+  });
+
 });
